@@ -10,7 +10,7 @@ function Tesla(model, acceleration, range) {
 // TODO : Определить родительскую функцию, которая включает / отключает зарядку;
 
 Tesla.prototype.charge = function (currentStatus) {
-    minutesUntilFullyCharged = (100 - currentStatus) * 5; // 1% requires 5 minutes of charging
+    let minutesUntilFullyCharged = (100 - currentStatus) * 5; // 1% requires 5 minutes of charging
     let intervalId = setInterval(() => {
         console.log(`${minutesUntilFullyCharged} minutes remaining`);
         minutesUntilFullyCharged -= 30;
