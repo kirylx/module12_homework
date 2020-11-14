@@ -33,13 +33,13 @@ class TeslaWithCharger extends Tesla {
             minutesUntilFullyCharged -= 30;
             if (minutesUntilFullyCharged <= 0) {
                 clearInterval(intervalId);
-                this.disconnectFromCharging();
+                TeslaWithCharger.disconnectFromCharging();
             }
         }, 1000);
         return true;
     };
 
-    disconnectFromCharging() {
+    static disconnectFromCharging() {
         console.log("Charger is unplugged");
     }
 }
